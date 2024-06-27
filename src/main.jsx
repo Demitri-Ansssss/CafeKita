@@ -1,51 +1,52 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import MenuUtama from './Pages/MenuUtama.jsx';
-import Home from './Pages/Home.jsx';
-import MenuMakanan from './Pages/MenuMakanan.jsx';
-import MenuMinuman from './Pages/MenuMinuman.jsx';
-import Keranjang from './Pages/Keranjang.jsx';
-import AboutUs from './Pages/AboutUs.jsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MenuUtama from "./Pages/MenuUtama.jsx";
+import Home from "./Pages/Home.jsx";
+import MenuMakanan from "./Pages/MenuMakanan.jsx";
+import MenuMinuman from "./Pages/MenuMinuman.jsx";
+import AboutUs from "./Pages/AboutUs.jsx";
+import { Provider } from "react-redux";
+import { store } from "./lib/redux/store";
+import { persistStore } from "redux-persist";
+import { PersistGate } from "redux-persist/integration/react";
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element: <Home/>
+    path: "/",
+    element: <Home />,
   },
   {
-    path:"/MenuUtama",
-    element: <MenuUtama/>
+    path: "/MenuUtama",
+    element: <MenuUtama />,
   },
   {
-    path:"/Home",
-    element: <Home/>
+    path: "/Home",
+    element: <Home />,
   },
   {
     path: "/MenuMakanan",
-    element: <MenuMakanan/>
+    element: <MenuMakanan />,
   },
   {
     path: "/MenuMinuman",
-    element: <MenuMinuman/>
-  },
-  {
-    path: "/Keranjang",
-    element: <Keranjang/>
+    element: <MenuMinuman />,
   },
   {
     path: "/AboutUs",
-    element: <AboutUs/>
-  }
-])
+    element: <AboutUs />,
+  },
+]);
 
+const persistor = persistStore(store);
 
-
-ReactDOM.createRoot(document.getElementById('root'))
-  
-.render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <RouterProvider router={router}/>
-  </React.StrictMode>,
-)
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <RouterProvider router={router} />
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
+);
