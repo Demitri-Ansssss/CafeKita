@@ -15,14 +15,16 @@ const DataMakanan = [
             img :cheescake,
             title: "Cheese Cake",
             harga: 25,
-            qty:1
+            qty:1,
+            deskripsi: "Kue lembut dengan cita rasa manis dan gurih dari keju dipadukan dengan segarnya buah"
         },
         {
             id:2,
             img :cookies,
             title: "Cookies",
             harga: 25,
-            qty:1
+            qty:1,
+            deskripsi:"dipenuhi dengan isi coklat yang lembut ddalamnya"
         },
         {
             id:3,

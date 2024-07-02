@@ -2,7 +2,7 @@ import AuthLayout from "../Layouts/AuthLayout"
 import Search from "../assets/search.svg"
 import cartmenu from "../assets/cartmenu.svg"
 import MenuCard from "../Components/MenuCard"
-import Modal from "../Components/Modal"
+
 
 
 
