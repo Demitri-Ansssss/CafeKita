@@ -1,39 +1,66 @@
+import DataMakanan from '@/Components/CardDataMakanan';
+import Trash from '../assets/Trash.svg'
+
+import { useState } from "react";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
+  // SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/Components/ui/sheet";
 import { deleteChartDataByTitle } from "@/lib/redux/api/chart.slice";
 import { useDispatch, useSelector } from "react-redux";
+import DataMinuman from '@/Components/CardDataMinuman';
 
 function Keranjang() {
+  const DataProduct = [DataMakanan,DataMinuman]
   const { chartData } = useSelector((state) => state.chart);
+  DataProduct === chartData;
   const dispatch = useDispatch()
 
-  function handleDeleteFromChart(tittle) {
-    dispatch(deleteChartDataByTitle(tittle));
+  const[count, setCount] = useState(1)
+
+  function handleDeleteFromChart(id) {
+    dispatch(deleteChartDataByTitle(id));
     alert("Deleted from chart")
   }
   return (
     <Sheet>
       <SheetTrigger id="openChart" className="hidden"></SheetTrigger>
       <SheetContent className="bg-slate-50">
-        <SheetHeader>
-          <SheetTitle>Chart</SheetTitle>
-          <div className="flex flex-col gap-2">
+        <SheetHeader className=" flex justify-around w-full h-full mx-auto s">
+          <div className="flex flex-col gap-10 items-center w-auto h-auto">
             {chartData?.map((data, index) => (
-              <div key={index} className="grid grid-cols-3 p-4 border rounded-xl items-center">
-                <h1>{data.title}</h1>
-                <h1 className="text-center">{data.harga}</h1>
-                <div className="w-full flex justify-end items-center">
-                  <button onClick={() => handleDeleteFromChart(data.title)}>Delete</button>
+              <div key={index} className="flex justify-around w-6/12 p-2 border rounded-xl items-center">
+                <img src={data.img} alt="" className=' shadow-2xl bg-neutral-200 p-10' width={300} height={200}/>
+                <div>
+                  <div className='flex flex-col ml-10 w-96 items-center self-center justify-center'>
+                    <h1 className='font-poppins text-5xl w-full ml-5'>{data.title}</h1>
+                    <p className="font-poppins text-xl font-bold text-center relative z-50 right-32">
+                        <h5>Rp. {data.harga.toFixed(3)}</h5>
+                    </p>
+                  </div>
                 </div>
+                <div className="w-full flex justify-end gap-2 items-center">
+                <div className='flex space-x-4 w-34 h-4 p-5 text-5xl justify-between rounded-3xl border-4'>
+                  <button className=' cursor-pointer select-none -top-8 relative' onClick={() => setCount(count - 1)}>-</button>
+                  <p className='font-poppins font-bold text-xl -top-4 relative'>{count}</p>
+                  <button className=' cursor-pointer select-none -top-8 relative' onClick={() => setCount(count + 1)}>+</button>
+                </div>
+                  <button onClick={() => handleDeleteFromChart(data.id)}>
+                    <img src={Trash} alt="" />
+                  </button>
+                </div>
+                {/* <div className='absolute top-10 w-full bg-red-600'>
+                <h1 className='text-white'>total Harga {(data.harga * count).toFixed(3)}</h1>
+
+                </div> */}
               </div>
             ))}
           </div>
+            
         </SheetHeader>
       </SheetContent>
     </Sheet>

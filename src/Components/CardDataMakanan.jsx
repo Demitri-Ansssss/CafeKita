@@ -15,54 +15,63 @@ const DataMakanan = [
             img :cheescake,
             title: "Cheese Cake",
             harga: 25,
+            qty:1
         },
         {
             id:2,
             img :cookies,
             title: "Cookies",
             harga: 25,
+            qty:1
         },
         {
             id:3,
             img :croisant,
             title: "Croisant",
             harga: 25,
+            qty:1
         },
         {
             id:4,
             img :belgianwaffel,
             title: "Belgian Waffel",
             harga: 25,
+            qty:1
         },
         {
             id:5,
             img :donat,
             title: "Donut",
             harga: 25,
+            qty:1
         },
         {
             id:6,
             img :flufypancake,
             title: "Flufy Pancake",
             harga: 25,
+            qty:1
         },
         {
             id:7,
             img :rotibakar,
             title: "Roti Bakar Bandung",
             harga: 25,
+            qty:1
         },
         {
             id:8,
             img :sanwich,
             title: "Sandwich",
             harga: 25,
+            qty:1
         },
         {
             id:9,
             img :cinnamonroll,
             title: "Cinnamon Roll",
             harga: 25,
+            qty:1
         }
     ]
    

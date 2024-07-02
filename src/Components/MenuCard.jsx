@@ -1,14 +1,19 @@
 import PropTypes from "prop-types";
 import DataMakanan from "./CardDataMakanan";
-import DataMinuman from "./CardDataMinuman";
+// import DataMinuman from "./CardDataMinuman";
 import { useDispatch } from "react-redux";
 import { addChartData } from "@/lib/redux/api/chart.slice";
 
 const MenuCard = (props) => {
     const dispatch = useDispatch()
     function handleAddToCart(data) {
-        dispatch(addChartData(data))
-        alert("Added to chart")
+        dispatch(addChartData({
+          id : Math.floor(Math.random() * 10),
+          title : data.title,
+          img : data.img,
+          harga : data.harga
+
+        }))
     }   
   return (
     <div>
@@ -17,7 +22,7 @@ const MenuCard = (props) => {
           <>
             <div>
               <div className=" flex flex-col items-center justify-center shadow-2xl ">
-                <div className="flex flex-col justify-center items-center h-2/3">
+                <div className="flex flex-col justify-center items-center h-auto gap-2 text-black">
                   <img
                     src={data.img}
                     alt=""
@@ -42,15 +47,22 @@ const MenuCard = (props) => {
                       className=" -mt-5 hover:scale-125 transition-all  "
                     />
                   </button>
+                  {/* Modal */}
+                  <label htmlFor="my_modal_6" className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all">Detail</label>
+                  <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+                  <div className="modal" role="dialog">
+                    <div className="modal-box">
+                      <h3 className="text-lg font-bold">Hello!</h3>
+                      <img src={data.img} alt="" />
+                      <p className="py-4">This modal works with a hidden checkbox!</p>
+                      <div className="modal-action">
+                        <label htmlFor="my_modal_6" className="btn">Close!</label>
+                      </div>
+                    </div>
+                  </div>
                   <a
                     href="/"
-                    className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-menuAndalan-0 text-white hover:bg-BtnHoverMenu-0 hover:text-gray-500 transition-all"
-                  >
-                    Detail
-                  </a>
-                  <a
-                    href="/"
-                    className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-menuAndalan-0 text-white hover:bg-BtnHoverMenu-0 hover:text-gray-500 transition-all"
+                    className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all"
                   >
                     Bayar
                   </a>

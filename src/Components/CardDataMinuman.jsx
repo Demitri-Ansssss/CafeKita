@@ -13,46 +13,55 @@ const DataMinuman = [
             img :capuchino,
             title: "Capuchino",
             harga: 25,
+            qty:1
         },
         {
             img :caramelmilkshake,
             title: "Caramel MilkShake",
             harga: 25,
+            qty:1
         },
         {
             img :latte,
             title: "Latte",
             harga: 25,
+            qty:1
         },
         {
             img :strobery,
             title: "Korean Strawberry Milk",
             harga: 25,
+            qty:1
         },
         {
             img :americano,
             title: "Americano",
             harga: 25,
+            qty:1
         },
         {
             img :espreso,
             title: "Espresso",
             harga: 25,
+            qty:1
         },
         {
             img :esteh,
             title: "Es Teh",
             harga: 9,
+            qty:1
         },
         {
             img :macha,
             title: "Macha",
             harga: 25,
+            qty:1
         },
         {
             img :chocolate,
             title: "Chocolate",
-            harga: 20,   
+            harga: 20,
+            qty:1   
         }
 ]
 

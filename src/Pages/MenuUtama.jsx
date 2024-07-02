@@ -18,12 +18,12 @@ function MenuUtama() {
             <div className=' shadow-2xl flex flex-col items-center w-auto h-auto mt-16 bg-white gap-2'>
               <img src={ImgMakanan} alt="" width={400} height={400} className=' ' />
               <h1 className='font-poppins text-textandalan-0 text-4xl font-bold'>Makanan</h1>
-              <a href="/MenuMakanan" className='border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-menuAndalan-0 text-white hover:bg-BtnHoverMenu-0 hover:text-gray-500 transition-all'>Lihat</a>
+              <a href="/MenuMakanan" className='border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-orange-300 text-white hover:bg-orange-500 hover:italic transition-all'>Lihat</a>
             </div>
             <div className=' shadow-2xl flex flex-col items-center w-auto h-auto mt-16 bg-white gap-2'>
               <img src={ImgMinuman} alt="" width={400} height={400} className=' ' />
               <h1 className='font-poppins text-textandalan-0 text-4xl font-bold'>Minuman</h1>
-              <a href="/MenuMinuman" className='border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-menuAndalan-0 text-white hover:bg-BtnHoverMenu-0 hover:text-gray-500 transition-all'>Lihat</a>
+              <a href="/MenuMinuman" className='border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-orange-300  text-white hover:bg-orange-500 hover:italic transition-all'>Lihat</a>
             </div>
           </div>
         </div>
