@@ -1,6 +1,6 @@
-function Modal({ isOpen, data }) {
+function Modal({ isOpen, data, isClose }) {
   return (
-    <dialog id="my_modal_3" className="modal" open={isOpen}>
+    <dialog id="my_modal_3" className="modal" open={isOpen} close={isClose}>
       <div className="modal-box w-auto shadow-2xl bg-white items-center flex justify-center flex-col">
         <form method="dialog">
           {/* if there is a button in form, it will close the modal */}

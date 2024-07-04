@@ -7,6 +7,8 @@ import Home from "./Pages/Home.jsx";
 import MenuMakanan from "./Pages/MenuMakanan.jsx";
 import MenuMinuman from "./Pages/MenuMinuman.jsx";
 import AboutUs from "./Pages/AboutUs.jsx";
+import Keranjang from "./Pages/Keranjang.jsx";
+import Pembayaran from "./Pages/Pembayaran.jsx";
 import { Provider } from "react-redux";
 import { store } from "./lib/redux/store";
 import { persistStore } from "redux-persist";
@@ -22,10 +24,6 @@ const router = createBrowserRouter([
     element: <MenuUtama />,
   },
   {
-    path: "/Home",
-    element: <Home />,
-  },
-  {
     path: "/MenuMakanan",
     element: <MenuMakanan />,
   },
@@ -36,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: "/AboutUs",
     element: <AboutUs />,
+  },
+  {
+    path: "/Pembayaran",
+    element: <Pembayaran />,
+  },
+  {
+    path: "/Keranjang",
+    element: <Keranjang />,
   },
 ]);
 

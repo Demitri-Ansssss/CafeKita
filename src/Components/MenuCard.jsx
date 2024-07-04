@@ -7,7 +7,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 const MenuCard = (props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen, isClose, setIsClose] = useState(true);
   const [dataDetailed, setDataDetailed] = useState({});
   const dispatch = useDispatch();
   function handleAddToCart(data) {
@@ -23,6 +23,7 @@ const MenuCard = (props) => {
   const toggleModal = (data) => {
     setIsOpen(!isOpen);
     setDataDetailed(data);
+    setIsClose(!isClose);
   };
   return (
     <div>
@@ -75,8 +76,8 @@ const MenuCard = (props) => {
             </div>
           </>
         ))}
+        <Modal isOpen={isClose} data={dataDetailed} />
       </div>
-      <Modal isOpen={isOpen} data={dataDetailed} />
     </div>
   );
 };
