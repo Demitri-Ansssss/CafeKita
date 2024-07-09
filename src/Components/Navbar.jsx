@@ -6,7 +6,7 @@ export default function App() {
   }
 
   return (
-    <div className=" bg-orange-300 ">
+    <div className=" bg-textutama">
       <div className="container flex  justify-between mx-auto w-auto p-4">
         <a
           href="/Home"

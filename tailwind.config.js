@@ -23,6 +23,7 @@ module.exports = {
 
       colors: {
         textutama: "#C8A287",
+        texthover: "#BD9476",
         btndropdown: "#958d8d",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

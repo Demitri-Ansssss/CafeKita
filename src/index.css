@@ -5,3 +5,7 @@
 #root {
   background: white;
 }
+
+.dropdownwidth {
+  @apply w-96;
+}
