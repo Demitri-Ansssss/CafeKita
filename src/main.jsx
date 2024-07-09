@@ -25,8 +25,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/MenuUtama" element={<MenuUtama />} />
             <Route path="/MenuUtama/MenuMakanan" element={<MenuMakanan />} />
             <Route path="/MenuUtama/MenuMinuman" element={<MenuMinuman />} />
-            <Route path="/AboutUs" element={<AboutUs />} />
-            <Route path="/Pembayaran" element={<Pembayaran />} />
+            <Route path="//AboutUs" element={<AboutUs />} />
+            <Route path="//Pembayaran" element={<Pembayaran />} />
           </Routes>
         </Router>
       </PersistGate>
