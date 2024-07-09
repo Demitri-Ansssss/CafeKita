@@ -13,6 +13,7 @@ import {
 import { deleteChartDataByTitle } from "@/lib/redux/api/chart.slice";
 import { useDispatch, useSelector } from "react-redux";
 import DataMinuman from "@/Components/CardDataMinuman";
+import { Link } from "react-router-dom";
 
 function Keranjang(data) {
   const DataProduct = [DataMakanan, DataMinuman];
@@ -85,11 +86,8 @@ function Keranjang(data) {
                 Total Harga{" "}
                 {chartData?.reduce((a, b) => a + b.harga, 0).toFixed(3)}
               </h1>
-              <button
-                className="bg-orange-300 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded"
-                href="/Pembayaran"
-              >
-                <a href="/Pembayaran">Beli Sekarang</a>
+              <button className="bg-orange-300 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded">
+                <Link to="/Pembayaran">Beli Sekarang</Link>
               </button>
             </div>
           </div>
