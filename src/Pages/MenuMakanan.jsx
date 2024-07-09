@@ -40,10 +40,10 @@ function MenuMakanan() {
             className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow bg-btndropdown text-lg font-poppins font-normal"
           >
             <li className="btn-outline rounded-full text-white">
-              <a href="/MenuMakanan">Makanan</a>
+              <Link to="/MenuUtama/MenuMakanan">Makanan</Link>
             </li>
             <li className="btn-outline rounded-full text-white">
-              <a href="/MenuMinuman">Minuman</a>
+              <Link to="/MenuMinuman">Minuman</Link>
             </li>
           </ul>
         </div>
