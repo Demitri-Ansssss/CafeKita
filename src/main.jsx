@@ -4,10 +4,9 @@ import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MenuUtama from "./Pages/MenuUtama.jsx";
 import Home from "./Pages/Home.jsx";
-import MenuMakanan from "./Pages/MenuMakanan";
+import MenuMakanan from "./Pages/MenuMakanan.jsx";
 import MenuMinuman from "./Pages/MenuMinuman.jsx";
 import AboutUs from "./Pages/AboutUs.jsx";
-import Keranjang from "./Pages/Keranjang.jsx";
 import Pembayaran from "./Pages/Pembayaran.jsx";
 import { Provider } from "react-redux";
 import { store } from "./lib/redux/store";
@@ -24,8 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/MenuUtama" element={<MenuUtama />} />
-            <Route path="/MenuMakanan" element={<MenuMakanan />} />
-            <Route path="/MenuMinuman" element={<MenuMinuman />} />
+            <Route path="/MenuUtama/MenuMakanan" element={<MenuMakanan />} />
+            <Route path="/MenuUtama/MenuMinuman" element={<MenuMinuman />} />
             <Route path="/AboutUs" element={<AboutUs />} />
             <Route path="/Pembayaran" element={<Pembayaran />} />
           </Routes>
