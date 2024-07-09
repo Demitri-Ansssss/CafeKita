@@ -43,7 +43,7 @@ function MenuMakanan() {
               <Link to="/MenuUtama/MenuMakanan">Makanan</Link>
             </li>
             <li className="btn-outline rounded-full text-white">
-              <Link to="/MenuMinuman">Minuman</Link>
+              <Link to="/MenuUtama/MenuMinuman">Minuman</Link>
             </li>
           </ul>
         </div>
