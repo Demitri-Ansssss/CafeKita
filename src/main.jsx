@@ -23,8 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/MenuUtama" element={<MenuUtama />} />
-            <Route path="../MenuMakanan" element={<MenuMakanan />} />
-            <Route path="./MenuMinuman" element={<MenuMinuman />} />
+            <Route path="/MenuUtama/MenuMakanan" element={<MenuMakanan />} />
+            <Route path="/MenuUtama/MenuMinuman" element={<MenuMinuman />} />
             <Route path="//AboutUs" element={<AboutUs />} />
             <Route path="/Pembayaran" element={<Pembayaran />} />
           </Routes>

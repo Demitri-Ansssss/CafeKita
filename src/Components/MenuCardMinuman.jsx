@@ -2,13 +2,21 @@ import PropTypes from "prop-types";
 import DataMinuman from "./CardDataMinuman";
 import { addChartData } from "@/lib/redux/api/chart.slice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const MenuCard = (props) => {
+  const [isOpen, setIsOpen, isClose, setIsClose] = useState(true);
   const dispatch = useDispatch();
   function handleAddToCart(data) {
     dispatch(addChartData(data));
     alert("Added to Cart");
   }
+  const toggleModal = (data) => {
+    setIsOpen(!isOpen);
+    setDataDetailed(data);
+    setIsClose(!isClose);
+  };
   return (
     <div>
       <div className="grid grid-cols-3 gap-20 w-full h-auto mt-24 bg-white  rounded-2xl ">
@@ -41,18 +49,18 @@ const MenuCard = (props) => {
                       className=" -mt-5 hover:scale-125 transition-all  "
                     />
                   </button>
-                  <a
-                    href="/"
+                  <button
+                    onClick={() => toggleModal(data)}
                     className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all"
                   >
                     Detail
-                  </a>
-                  <a
-                    href="/"
+                  </button>
+                  <Link
+                    to="/Pembayaran"
                     className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all"
                   >
                     Bayar
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

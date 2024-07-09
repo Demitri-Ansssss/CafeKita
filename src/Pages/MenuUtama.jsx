@@ -30,7 +30,7 @@ function MenuUtama() {
               Makanan
             </h1>
             <Link
-              to="../MenuMakanan"
+              to="/MenuUtama/MenuMakanan"
               className="border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-texthover hover:italic transition-all"
             >
               Lihat
@@ -48,7 +48,7 @@ function MenuUtama() {
               Minuman
             </h1>
             <Link
-              to="./MenuMinuman"
+              to="/MenuUtama/MenuMinuman"
               className="border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama  text-white hover:bg-texthover hover:italic transition-all"
             >
               Lihat
