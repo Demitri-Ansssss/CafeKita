@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addChartData } from "@/lib/redux/api/chart.slice";
 import { useState } from "react";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 const MenuCard = (props) => {
   const [isOpen, setIsOpen, isClose, setIsClose] = useState(true);
@@ -65,12 +66,12 @@ const MenuCard = (props) => {
                     Detail
                   </button>
 
-                  <a
-                    href="/"
+                  <Link
+                    href="/MenuUtama/MenuMakanan/Pembayaran"
                     className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all"
                   >
                     Bayar
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
