@@ -42,7 +42,7 @@ const Home = () => {
             </h4>
             <Link
               to={"/MenuUtama"}
-              className="border p-4 m-4 rounded-full w-40 bg-BtnLanjut-0 text-white text-2xl hover:bg-gray-50 hover:text-slate-900 transition-all shadow-gray-700"
+              className="border text-center p-4 m-4 rounded-full w-40 bg-BtnLanjut-0 text-white text-2xl hover:bg-gray-50 hover:text-slate-900 transition-all shadow-gray-700"
             >
               Lanjut
             </Link>

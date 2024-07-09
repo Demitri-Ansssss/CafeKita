@@ -2,6 +2,7 @@ import DataMakanan from "@/Components/CardDataMakanan";
 import DataMinuman from "@/Components/CardDataMinuman";
 import { useDispatch, useSelector } from "react-redux";
 import Back from "../assets/back.svg";
+import Dropdown from "@/Components/Dropdown";
 
 function Pembayaran() {
   const DataProduct = [DataMakanan, DataMinuman];
@@ -60,31 +61,12 @@ function Pembayaran() {
             <h3 className="font-poppins font-medium text-xl">nama pemesan</h3>
             <input
               type="text"
-              className=" bg-white border focus-visible:none w-full h-8"
+              className=" bg-white border focus-visible:none w-96 h-8"
             />
             <h3 className="font-poppins font-medium text-xl">
               Pilih tempat makan
             </h3>
-            <div className="dropdown dropdownwidth dropdown-hover w-full">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn m-1 rounded-2xl w-full bg-btndropdown text-lg btn-outline text-white"
-              >
-                Pilih Tempat Makan{" "}
-              </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow bg-btndropdown text-lg font-poppins font-normal"
-              >
-                <li className="btn-outline rounded-full text-white">
-                  <a href="/MenuMakanan">Ditempat</a>
-                </li>
-                <li className="btn-outline rounded-full text-white">
-                  <a href="/MenuMinuman">Dibawa Pulang</a>
-                </li>
-              </ul>
-            </div>
+            <Dropdown />
             <h3 className="font-poppins font-medium text-xl">
               Pilih metode pembayaran
             </h3>
