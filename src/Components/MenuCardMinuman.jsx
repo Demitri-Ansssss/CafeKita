@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import DataMinuman from "./CardDataMinuman";
+import Modal from "./Modal";
 import { addChartData } from "@/lib/redux/api/chart.slice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
@@ -7,6 +8,7 @@ import { useState } from "react";
 
 const MenuCard = (props) => {
   const [isOpen, setIsOpen, isClose, setIsClose] = useState(true);
+  const [dataDetailed, setDataDetailed] = useState({});
   const dispatch = useDispatch();
   function handleAddToCart(data) {
     dispatch(addChartData(data));
@@ -66,6 +68,7 @@ const MenuCard = (props) => {
             </div>
           </>
         ))}
+        <Modal isOpen={isOpen} isClose={isClose} data={dataDetailed} />
       </div>
     </div>
   );

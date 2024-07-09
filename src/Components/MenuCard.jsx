@@ -67,7 +67,7 @@ const MenuCard = (props) => {
                   </button>
 
                   <Link
-                    to="//Pembayaran"
+                    to="/Pembayaran"
                     className="border-2 p-2 rounded-full w-36 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-orange-300 hover:text-gray-500 transition-all"
                   >
                     Bayar
@@ -77,7 +77,7 @@ const MenuCard = (props) => {
             </div>
           </>
         ))}
-        <Modal isOpen={isClose} data={dataDetailed} />
+        <Modal isOpen={isOpen} isClose={isClose} data={dataDetailed} />
       </div>
     </div>
   );
