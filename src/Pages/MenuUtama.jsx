@@ -2,7 +2,7 @@
 // import Footer from '../Components/Footer.jsx'
 import ImgMakanan from "../assets/MenuMakanan.svg";
 import ImgMinuman from "../assets/MenuMinuman.svg";
-
+import { Link } from "react-router-dom";
 import AuthLayout from "../Layouts/AuthLayout";
 
 function MenuUtama() {
@@ -29,12 +29,12 @@ function MenuUtama() {
             <h1 className="font-poppins text-black text-4xl font-bold">
               Makanan
             </h1>
-            <a
-              href="/MenuMakanan"
+            <Link
+              to="/MenuMakanan"
               className="border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama text-white hover:bg-texthover hover:italic transition-all"
             >
               Lihat
-            </a>
+            </Link>
           </div>
           <div className=" shadow-2xl flex flex-col items-center w-auto h-auto mt-16 bg-white gap-2">
             <img
@@ -47,12 +47,12 @@ function MenuUtama() {
             <h1 className="font-poppins text-black text-4xl font-bold">
               Minuman
             </h1>
-            <a
-              href="/MenuMinuman"
+            <Link
+              to="/MenuMinuman"
               className="border-2 p-2 rounded-full w-40 text-center font-poppins font-bold text-xl mb-7 mt-2 bg-textutama  text-white hover:bg-texthover hover:italic transition-all"
             >
               Lihat
-            </a>
+            </Link>
           </div>
         </div>
       </div>
